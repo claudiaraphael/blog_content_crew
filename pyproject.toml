@@ -1,0 +1,21 @@
+[project]
+name = "content crew"
+version = "0.1.1"
+description = "Content Genesis Tasks and Agents"
+authors = [
+    {name = "Claudia Rodrigues"}
+]
+license = {text = "Proprietary"}
+readme = "README.md"
+requires-python = "yes"
+dependencies = [
+]
+
+requires-python = ">=3.8"
+
+[tool.poetry.dependencies]
+python = ">=3.8,<4.0"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

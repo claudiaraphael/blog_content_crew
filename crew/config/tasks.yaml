@@ -10,6 +10,10 @@
 ## Goal: Gather data to ensure informed SEO optimization.
 
 # Research: Brand Voice → Ensure consistency with brand tone & messaging
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0076e05 (master)
 research_brand_voice:
   description: |
     Conduct research to ensure consistency with the brand’s messaging.  
@@ -39,6 +43,7 @@ research_brand_voice:
 
 
 # Research: Product Specifics → Understand key product attributes & features
+<<<<<<< HEAD
 research_product_specifics:
   description: |
     Extract and analyze key product attributes and features, including specifications, competitive advantages, and unique selling points.
@@ -111,6 +116,12 @@ keyword_research:
 
 
 # Research: Rich Semantic Keyword  -> Identify contextually relevant and SEO-rich keywords, including primary, long-tail, and LSI terms, to enhance product visibility. Analyze search intent, competitor keywords, and AI-driven insights to create a diverse, high-impact keyword set for optimization.
+=======
+# Research: Keyword Research → Identify high-impact keywords for visibility
+
+# Research: Rich Semantic Keyword  -> Identify contextually relevant and SEO-rich keywords, including primary, long-tail, and LSI terms, to enhance product visibility. Analyze search intent, competitor keywords, and AI-driven insights to create a diverse, high-impact keyword set for optimization.
+
+>>>>>>> 0076e05 (master)
 research_rich_semantic_keywords:
   description: |
     After analyzing all key exact-match keywords, identify closely semantically related keywords 
@@ -148,6 +159,7 @@ research_rich_semantic_keywords:
     }
     ```
 # Research: Competitor Analysis → Analyze top-ranking competitors for insights
+<<<<<<< HEAD
 research_competitor_analysis:
   description: |
     Conduct in-depth competitor analysis using AI-powered research agents.
@@ -213,6 +225,8 @@ research_competitor_analysis:
     - If multiple competitors are analyzed, ensure a comparative analysis is presented.
 
 
+=======
+>>>>>>> 0076e05 (master)
 # Research: Trends → Discover emerging trends in the product category
 # Research: Voice of Customer → Extract customer feedback & sentiment for improvements
 # Research: Category-Specific Nuances → Understand SEO rules for the product category
