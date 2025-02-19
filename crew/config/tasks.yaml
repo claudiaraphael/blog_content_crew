@@ -1,0 +1,244 @@
+
+## Agentic SEO Workflow
+
+# Tasks:
+
+# Agentic Workflow for SEO Optimization
+
+## 1. Research Phase (Understanding the Product & Market)
+
+## Goal: Gather data to ensure informed SEO optimization.
+
+# Research: Brand Voice → Ensure consistency with brand tone & messaging
+research_brand_voice:
+  description: |
+    Conduct research to ensure consistency with the brand’s messaging.  
+    The research should analyze tone, style, and key messaging elements  
+    aligned with the brand's identity.  
+    Additionally, incorporate SEO best practices to enhance brand awareness  
+    and visibility in search engines.  
+
+  expected_output: |
+    JSON object structured as follows:
+    ```json
+    {
+      "brand_tone": "Concise description of the brand's tone",
+      "key_messaging": [
+        "List of core messaging points"
+      ],
+      "style_guidelines": {
+        "writing_style": "Formal/Informal/Conversational",
+        "preferred_vocabulary": ["word1", "word2"]
+      },
+      "seo_recommendations": {
+        "keywords": ["keyword1", "keyword2"],
+        "meta_description": "Suggested meta description following SEO guidelines"
+      }
+    }
+    ```
+
+
+# Research: Product Specifics → Understand key product attributes & features
+research_product_specifics:
+  description: |
+    Extract and analyze key product attributes and features, including specifications, competitive advantages, and unique selling points.
+    
+  input_parameters:
+    product_name: 
+      type: string
+      description: "The name of the product to be researched."
+    category:
+      type: string
+      description: "The category of the product (e.g., electronics, fashion, software)."
+    competitors:
+      type: list
+      description: "A list of competitor products for comparison."
+
+  expected_output: |
+    JSON object structured as follows:
+    
+    ```json
+    {
+      "product_name": "Example Product",
+      "category": "Example Category",
+      "attributes": {
+        "feature_1": "Detailed description of feature 1",
+        "feature_2": "Detailed description of feature 2"
+      },
+      "competitive_analysis": {
+        "advantage": "Key advantage over competitors",
+        "weakness": "Possible weakness compared to competitors"
+      },
+      "market_positioning": "Brief summary of how the product is positioned in the market."
+    }
+    ```
+
+  notes: |
+    - Ensure that all attributes and competitive analysis are backed by reliable sources.
+    - Provide citations or reference points where applicable.
+    - The JSON output should be structured and formatted properly.
+
+
+# Research: Keyword Research → Identify high-impact keywords for visibility
+keyword_research:
+  description: |
+    Utilize AI-powered keyword research tools to identify high-value search terms for SEO and marketing.
+    The agent will analyze search volume, competition, and relevancy to suggest optimal keywords.
+
+  input_parameters:
+    target_audience:
+      type: string
+      description: "The primary audience or niche for which keyword research is conducted."
+    product_or_topic:
+      type: string
+      description: "The main product, service, or topic to focus the keyword research on."
+    competitor_analysis:
+      type: boolean
+      description: "Flag to indicate whether competitor keyword analysis should be included."
+    keyword_type:
+      type: list
+      description: "Specify if the focus is on short-tail, long-tail, or LSI (Latent Semantic Indexing) keywords."
+      options: ["short-tail", "long-tail", "LSI"]
+
+  expected_output: |
+    JSON object structured as follows:
+    
+    ```json
+    {
+      "product_or_topic": "Example Product or Topic",
+      "target_audience": "Example Target Audience",
+      "high_value_ke
+
+
+# Research: Rich Semantic Keyword  -> Identify contextually relevant and SEO-rich keywords, including primary, long-tail, and LSI terms, to enhance product visibility. Analyze search intent, competitor keywords, and AI-driven insights to create a diverse, high-impact keyword set for optimization.
+research_rich_semantic_keywords:
+  description: |
+    After analyzing all key exact-match keywords, identify closely semantically related keywords 
+    that do not contain the same words but share the same meaning.
+
+    Your analysis should include:
+      - **Thematic Groups**: Categorized clusters of semantically related keywords.
+      - **Individual Keywords**: High-value keywords not in the same exact match set.
+    
+    Additionally, classify keywords into:
+      - **Close and loose competing keywords**: Keywords that rank for similar intent but vary in phrasing.
+      - **Complementary/adjacent keywords**: Keywords that support or enhance the topic coverage.
+      - **Substitute keywords**: Alternative keywords that could replace or outperform existing ones.
+
+    Finally, recommend additional keywords that should be prioritized.
+  
+  expected_output: |
+    JSON object structured as follows:
+    ```json
+    {
+      "thematic_groups": [
+        {
+          "group_name": "AI Technology",
+          "keywords": ["machine learning models", "neural networks", "deep learning"]
+        }
+      ],
+      "individual_keywords": ["automated AI research", "AI-driven content strategy"],
+      "competing_keywords": {
+        "close_match": ["AI research tools", "AI content analysis"],
+        "loose_match": ["digital marketing automation", "SEO optimization AI"]
+      },
+      "complementary_keywords": ["AI content generator", "data-driven marketing"],
+      "substitute_keywords": ["AI blog assistant", "semantic keyword research tool"],
+      "recommended_keywords": ["future AI trends", "predictive analytics AI"]
+    }
+    ```
+# Research: Competitor Analysis → Analyze top-ranking competitors for insights
+research_competitor_analysis:
+  description: |
+    Conduct in-depth competitor analysis using AI-powered research agents.
+    This includes identifying competitors, analyzing their product attributes, SEO strategies, and market positioning.
+    The research will highlight key competitive advantages and opportunities.
+
+  input_parameters:
+    target_market:
+      type: string
+      description: "The market or industry to analyze (e.g., SaaS, eCommerce, Automotive)."
+    product_name:
+      type: string
+      description: "The name of the product being analyzed."
+    competitors:
+      type: list
+      description: "A list of competitor names or brands for comparison."
+    analysis_type:
+      type: list
+      description: "Specify the focus of the competitor analysis."
+      options: ["SEO", "Product Features", "Pricing", "Marketing Strategy", "Customer Sentiment"]
+
+  expected_output: |
+    JSON object structured as follows:
+    
+    ```json
+    {
+      "product_name": "Example Product",
+      "target_market": "Example Industry",
+      "competitor_analysis": [
+        {
+          "competitor": "Competitor A",
+          "market_positioning": "Leader in budget-friendly options",
+          "product_features": {
+            "feature_1": "Description of feature 1",
+            "feature_2": "Description of feature 2"
+          },
+          "pricing": {
+            "base_price": 49.99,
+            "subscription_options": ["Monthly", "Yearly"]
+          },
+          "SEO_strategy": {
+            "top_keywords": ["keyword1", "keyword2"],
+            "organic_traffic": 500000,
+            "backlink_count": 1200
+          },
+          "marketing_strategy": {
+            "channels": ["Social Media", "Email Marketing"],
+            "campaign_success": "High engagement on Instagram and YouTube"
+          },
+          "customer_sentiment": {
+            "positive_reviews": 85,
+            "negative_reviews": 15,
+            "common_complaints": ["Limited customization", "High learning curve"]
+          }
+        }
+      ]
+    }
+    ```
+
+  notes: |
+    - Competitor analysis should be based on reliable data sources such as web scraping, SEO tools, and customer reviews.
+    - The JSON output should be structured and formatted properly.
+    - If multiple competitors are analyzed, ensure a comparative analysis is presented.
+
+
+# Research: Trends → Discover emerging trends in the product category
+# Research: Voice of Customer → Extract customer feedback & sentiment for improvements
+# Research: Category-Specific Nuances → Understand SEO rules for the product category
+# Research: Assessment of Current Listing → Audit existing content for gaps & weaknesses
+# Research: Platform Policies → Ensure compliance with Amazon SEO & listing guidelines
+
+# 2. Content Strategy & Planning Phase
+# Goal: Define a structured plan for SEO-optimized content creation.
+# Generate: Plan of Action → Outline the SEO strategy based on research findings
+
+# 3. Content Creation & Optimization Phase
+# Goal: Generate high-quality, SEO-optimized content based on research insights.
+# Generate: Optimized Product Title → Craft an attention-grabbing, keyword-rich product title
+# Generate: Key Product Features → Highlight product benefits in an SEO-friendly format
+# Generate: Product Description → Create a compelling, SEO-optimized product description
+# Generate: Generic Search Keywords → Find additional relevant search terms
+# Generate: Image Messaging Outline → Define how images communicate product benefits
+# Generate: A+ Content Blocks Outline → Plan enhanced Amazon A+ marketing content
+
+# 4. Quality Assurance & Compliance Phase
+# Goal: Validate that the content meets best practices and policy guidelines.
+# QA: Best Practices → Ensure the content follows SEO & Amazon listing best practices
+# QA: Amazon Policy Compliance (RAG) → Check content for compliance with Amazon’s guidelines
+
+# 5. Export & Deployment Phase
+# Goal: Store, distribute, and share optimized content efficiently.
+# Export: Save in Mongo → Store the final content in a database
+# Export: Create Office Document → Generate a downloadable version for stakeholders
+# Export: Send to Notification Service → Notify relevant teams about the new content

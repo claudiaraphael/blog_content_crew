@@ -1,0 +1,61 @@
+# prompt: I need to improve my task YAML and provide a JSON object for the output. Please review this YAML and improve it, along with reasoning for your changes.  
+# add description to the task before improving on CrewAI assistant.
+
+# empty sample
+research_task_name:
+  description: |
+
+    Ensure consistency with the brand’s messaging.
+    
+  expected_output: |
+    JSON object structured as follows:
+    
+json
+    {
+        {
+        }
+      
+      },
+    
+
+
+research_rich_semantic_keywords:
+  description: |
+    After analyzing all key exact-match keywords, identify closely semantically related keywords 
+    that do not contain the same words but share the same meaning.
+
+    Your analysis should include:
+      - **Thematic Groups**: Categorized clusters of semantically related keywords.
+      - **Individual Keywords**: High-value keywords not in the same exact match set.
+    
+    Additionally, classify keywords into:
+      - **Close and loose competing keywords**: Keywords that rank for similar intent but vary in phrasing.
+      - **Complementary/adjacent keywords**: Keywords that support or enhance the topic coverage.
+      - **Substitute keywords**: Alternative keywords that could replace or outperform existing ones.
+
+    Finally, recommend additional keywords that should be prioritized.
+  
+  expected_output: |
+    JSON object structured as follows:
+    ```json
+    {
+      "thematic_groups": [
+        {
+          "group_name": "AI Technology",
+          "keywords": ["machine learning models", "neural networks", "deep learning"]
+        }
+      ],
+      "individual_keywords": ["automated AI research", "AI-driven content strategy"],
+      "competing_keywords": {
+        "close_match": ["AI research tools", "AI content analysis"],
+        "loose_match": ["digital marketing automation", "SEO optimization AI"]
+      },
+      "complementary_keywords": ["AI content generator", "data-driven marketing"],
+      "substitute_keywords": ["AI blog assistant", "semantic keyword research tool"],
+      "recommended_keywords": ["future AI trends", "predictive analytics AI"]
+    }
+    ```
+
+
+
+
