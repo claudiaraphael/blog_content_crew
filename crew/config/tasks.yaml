@@ -46,9 +46,7 @@ research_brand_voice:
 
 
 # Research: Product Specifics → Understand key product attributes & features
-<<<<<<< HEAD
-<<<<<<< HEAD
-research_product_specifics:
+research_Produc_Specifics:
   description: |
     Extract and analyze key product attributes and features, including specifications, competitive advantages, and unique selling points.
     
@@ -120,37 +118,6 @@ keyword_research:
 
 
 # Research: Rich Semantic Keyword  -> Identify contextually relevant and SEO-rich keywords, including primary, long-tail, and LSI terms, to enhance product visibility. Analyze search intent, competitor keywords, and AI-driven insights to create a diverse, high-impact keyword set for optimization.
-=======
-# Research: Keyword Research → Identify high-impact keywords for visibility
-
-# Research: Rich Semantic Keyword  -> Identify contextually relevant and SEO-rich keywords, including primary, long-tail, and LSI terms, to enhance product visibility. Analyze search intent, competitor keywords, and AI-driven insights to create a diverse, high-impact keyword set for optimization.
-
->>>>>>> 0076e05 (master)
-=======
-research_Produc_Specifics:
-  description: |
-
-    Understand key product attributes & features
-    
-  expected_output: |
-    JSON object structured as follows:
-    
-json
-    {
-        {
-        }
-      ],
-      },
-    }
-
-
-
-
-
-
-# Research: Keyword Research → Identify high-impact keywords for visibility
-
-# Research: Rich Semantic Keyword  -> Identify contextually relevant and SEO-rich keywords, including primary, long-tail, and LSI terms, to enhance product visibility. Analyze search intent, competitor keywords, and AI-driven insights to create a diverse, high-impact keyword set for optimization.
 >>>>>>> b5e58be (organize sample_task and start production on tasks.yaml)
 research_rich_semantic_keywords:
   description: |
@@ -189,74 +156,6 @@ research_rich_semantic_keywords:
     }
     ```
 # Research: Competitor Analysis → Analyze top-ranking competitors for insights
-<<<<<<< HEAD
-research_competitor_analysis:
-  description: |
-    Conduct in-depth competitor analysis using AI-powered research agents.
-    This includes identifying competitors, analyzing their product attributes, SEO strategies, and market positioning.
-    The research will highlight key competitive advantages and opportunities.
-
-  input_parameters:
-    target_market:
-      type: string
-      description: "The market or industry to analyze (e.g., SaaS, eCommerce, Automotive)."
-    product_name:
-      type: string
-      description: "The name of the product being analyzed."
-    competitors:
-      type: list
-      description: "A list of competitor names or brands for comparison."
-    analysis_type:
-      type: list
-      description: "Specify the focus of the competitor analysis."
-      options: ["SEO", "Product Features", "Pricing", "Marketing Strategy", "Customer Sentiment"]
-
-  expected_output: |
-    JSON object structured as follows:
-    
-    ```json
-    {
-      "product_name": "Example Product",
-      "target_market": "Example Industry",
-      "competitor_analysis": [
-        {
-          "competitor": "Competitor A",
-          "market_positioning": "Leader in budget-friendly options",
-          "product_features": {
-            "feature_1": "Description of feature 1",
-            "feature_2": "Description of feature 2"
-          },
-          "pricing": {
-            "base_price": 49.99,
-            "subscription_options": ["Monthly", "Yearly"]
-          },
-          "SEO_strategy": {
-            "top_keywords": ["keyword1", "keyword2"],
-            "organic_traffic": 500000,
-            "backlink_count": 1200
-          },
-          "marketing_strategy": {
-            "channels": ["Social Media", "Email Marketing"],
-            "campaign_success": "High engagement on Instagram and YouTube"
-          },
-          "customer_sentiment": {
-            "positive_reviews": 85,
-            "negative_reviews": 15,
-            "common_complaints": ["Limited customization", "High learning curve"]
-          }
-        }
-      ]
-    }
-    ```
-
-  notes: |
-    - Competitor analysis should be based on reliable data sources such as web scraping, SEO tools, and customer reviews.
-    - The JSON output should be structured and formatted properly.
-    - If multiple competitors are analyzed, ensure a comparative analysis is presented.
-
-
-=======
->>>>>>> 0076e05 (master)
 # Research: Trends → Discover emerging trends in the product category
 # Research: Voice of Customer → Extract customer feedback & sentiment for improvements
 # Research: Category-Specific Nuances → Understand SEO rules for the product category
