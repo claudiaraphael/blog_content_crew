@@ -1,4 +1,4 @@
-[project]
+git commit [project]
 name = "content crew"
 version = "0.1.1"
 description = "Content Genesis Tasks and Agents"

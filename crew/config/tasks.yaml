@@ -11,9 +11,12 @@
 
 # Research: Brand Voice → Ensure consistency with brand tone & messaging
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 0076e05 (master)
+=======
+>>>>>>> b5e58be (organize sample_task and start production on tasks.yaml)
 research_brand_voice:
   description: |
     Conduct research to ensure consistency with the brand’s messaging.  
@@ -43,6 +46,7 @@ research_brand_voice:
 
 
 # Research: Product Specifics → Understand key product attributes & features
+<<<<<<< HEAD
 <<<<<<< HEAD
 research_product_specifics:
   description: |
@@ -122,6 +126,32 @@ keyword_research:
 # Research: Rich Semantic Keyword  -> Identify contextually relevant and SEO-rich keywords, including primary, long-tail, and LSI terms, to enhance product visibility. Analyze search intent, competitor keywords, and AI-driven insights to create a diverse, high-impact keyword set for optimization.
 
 >>>>>>> 0076e05 (master)
+=======
+research_Produc_Specifics:
+  description: |
+
+    Understand key product attributes & features
+    
+  expected_output: |
+    JSON object structured as follows:
+    
+json
+    {
+        {
+        }
+      ],
+      },
+    }
+
+
+
+
+
+
+# Research: Keyword Research → Identify high-impact keywords for visibility
+
+# Research: Rich Semantic Keyword  -> Identify contextually relevant and SEO-rich keywords, including primary, long-tail, and LSI terms, to enhance product visibility. Analyze search intent, competitor keywords, and AI-driven insights to create a diverse, high-impact keyword set for optimization.
+>>>>>>> b5e58be (organize sample_task and start production on tasks.yaml)
 research_rich_semantic_keywords:
   description: |
     After analyzing all key exact-match keywords, identify closely semantically related keywords 

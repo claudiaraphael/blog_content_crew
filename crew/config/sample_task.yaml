@@ -1,4 +1,7 @@
+<<<<<<< HEAD
   <<<<<<< HEAD
+=======
+>>>>>>> b5e58be (organize sample_task and start production on tasks.yaml)
 # prompt: I need to improve my task YAML and provide a JSON object for the output. Please review this YAML and improve it, along with reasoning for your changes.  
 # add description to the task before improving on CrewAI assistant.
 
@@ -15,6 +18,7 @@ json
     {
         {
         }
+<<<<<<< HEAD
       
       },
     
@@ -22,6 +26,13 @@ json
 
 =======
 >>>>>>> 0076e05 (master)
+=======
+      ],
+      },
+    }
+
+
+>>>>>>> b5e58be (organize sample_task and start production on tasks.yaml)
 research_rich_semantic_keywords:
   description: |
     After analyzing all key exact-match keywords, identify closely semantically related keywords 
