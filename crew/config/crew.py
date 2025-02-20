@@ -14,8 +14,8 @@ class seo_content_crew():
 
 
 @agent 
-def [agent name](self) -> Agent:
-return Agent(
-    config = self.agents_config['agent name']
-)
+def ['agent name'](self) -> Agent:
+  return Agent(
+  config = self.agents_config['agent name']
+    )
 
