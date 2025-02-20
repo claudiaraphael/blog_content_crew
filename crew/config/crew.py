@@ -45,6 +45,8 @@ def research_brand_voice(self) -> Agent:
      agent = self.brand_voice_researcher()
   ) 
 
+
+# create Crew
 @Crew
 def crew(Self) -> Crew:
    """Creates the SEOContentCrew crew"""
@@ -54,3 +56,4 @@ def crew(Self) -> Crew:
       process = Process.sequential,
       verbose = 2
    )
+
