@@ -10,13 +10,6 @@
 ## Goal: Gather data to ensure informed SEO optimization.
 
 # Research: Brand Voice → Ensure consistency with brand tone & messaging
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 0076e05 (master)
-=======
->>>>>>> b5e58be (organize sample_task and start production on tasks.yaml)
 research_brand_voice:
   description: |
     Conduct research to ensure consistency with the brand’s messaging.  
@@ -46,7 +39,7 @@ research_brand_voice:
 
 
 # Research: Product Specifics → Understand key product attributes & features
-research_Produc_Specifics:
+research_Product_Specifics:
   description: |
     Extract and analyze key product attributes and features, including specifications, competitive advantages, and unique selling points.
     
@@ -118,7 +111,6 @@ keyword_research:
 
 
 # Research: Rich Semantic Keyword  -> Identify contextually relevant and SEO-rich keywords, including primary, long-tail, and LSI terms, to enhance product visibility. Analyze search intent, competitor keywords, and AI-driven insights to create a diverse, high-impact keyword set for optimization.
->>>>>>> b5e58be (organize sample_task and start production on tasks.yaml)
 research_rich_semantic_keywords:
   description: |
     After analyzing all key exact-match keywords, identify closely semantically related keywords 
