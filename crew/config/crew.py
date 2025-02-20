@@ -44,3 +44,13 @@ def research_brand_voice(self) -> Agent:
      config = self.tasks_config['research_brand_voice'],
      agent = self.brand_voice_researcher()
   ) 
+
+@Crew
+def crew(Self) -> Crew:
+   """Creates the SEOContentCrew crew"""
+   return Crew(
+      agents = self.agents,
+      tasks = self.tasks,
+      process = Process.sequential,
+      verbose = 2
+   )
