@@ -21,7 +21,7 @@ def brand_voice_researcher(self) -> Agent:
     )
 
 @agent 
-def research_product_specifics(self) -> Agent:
+def product_specifics_researcher(self) -> Agent:
   return Agent(
   config = self.agents_config['brand voice researcher'],
   llm = self.groq_llm
@@ -33,7 +33,7 @@ def research_product_specifics(self) -> Agent:
 def research_product_specifics(self) -> Agent:
    return Task(
       config = self.tasks_config['research_product_specifics']
-      agent = self.research_product_specifics()
+      agent = self.product_specifics_researcher()
    )
    research_product_specifics
 
