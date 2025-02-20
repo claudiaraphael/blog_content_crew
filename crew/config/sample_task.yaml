@@ -13,8 +13,7 @@ research_task_name:
     
   expected_output: |
     JSON object structured as follows:
-    
-json
+  json
     {
       
 

@@ -147,8 +147,150 @@ research_rich_semantic_keywords:
       "recommended_keywords": ["future AI trends", "predictive analytics AI"]
     }
     ```
+
+
 # Research: Competitor Analysis → Analyze top-ranking competitors for insights
+research_competitor_analysis:
+  description: |
+    Conduct in-depth competitor analysis using AI-powered research agents.
+    This includes identifying competitors, analyzing their product attributes, SEO strategies, and market positioning.
+    The research will highlight key competitive advantages and opportunities.
+
+  input_parameters:
+    target_market:
+      type: string
+      description: "The market or industry to analyze (e.g., SaaS, eCommerce, Automotive)."
+    product_name:
+      type: string
+      description: "The name of the product being analyzed."
+    competitors:
+      type: list
+      description: "A list of competitor names or brands for comparison."
+    analysis_type:
+      type: list
+      description: "Specify the focus of the competitor analysis."
+      options: ["SEO", "Product Features", "Pricing", "Marketing Strategy", "Customer Sentiment"]
+
+  expected_output: |
+    JSON object structured as follows:
+    
+    ```json
+    {
+      "product_name": "Example Product",
+      "target_market": "Example Industry",
+      "competitor_analysis": [
+        {
+          "competitor": "Competitor A",
+          "market_positioning": "Leader in budget-friendly options",
+          "product_features": {
+            "feature_1": "Description of feature 1",
+            "feature_2": "Description of feature 2"
+          },
+          "pricing": {
+            "base_price": 49.99,
+            "subscription_options": ["Monthly", "Yearly"]
+          },
+          "SEO_strategy": {
+            "top_keywords": ["keyword1", "keyword2"],
+            "organic_traffic": 500000,
+            "backlink_count": 1200
+          },
+          "marketing_strategy": {
+            "channels": ["Social Media", "Email Marketing"],
+            "campaign_success": "High engagement on Instagram and YouTube"
+          },
+          "customer_sentiment": {
+            "positive_reviews": 85,
+            "negative_reviews": 15,
+            "common_complaints": ["Limited customization", "High learning curve"]
+          }
+        }
+      ]
+    }
+    ```
+
+  notes: |
+    - Competitor analysis should be based on reliable data sources such as web scraping, SEO tools, and customer reviews.
+    - The JSON output should be structured and formatted properly.
+    - If multiple competitors are analyzed, ensure a comparative analysis is presented.
+
+
 # Research: Trends → Discover emerging trends in the product category
+research_trends:
+  description: |
+    Conduct trend analysis to identify emerging market patterns, consumer behavior shifts, 
+    and industry innovations. This research helps businesses stay ahead of competitors 
+    and adapt their strategies effectively.
+
+  input_parameters:
+    industry:
+      type: string
+      description: "The specific industry or market to analyze (e.g., technology, fashion, healthcare)."
+    timeframe:
+      type: string
+      description: "The period for trend analysis (e.g., last 6 months, past year, upcoming trends)."
+    data_sources:
+      type: list
+      description: "Sources for data collection (e.g., Google Trends, social media, industry reports)."
+      options: ["Google Trends", "Social Media", "News Articles", "Industry Reports", "Competitor Analysis"]
+    geographic_focus:
+      type: string
+      description: "Specify a region or global scope for trend research."
+
+  expected_output: |
+    JSON object structured as follows:
+
+    ```json
+    {
+      "industry": "Technology",
+      "timeframe": "Past 6 Months",
+      "trends": [
+        {
+          "trend_name": "AI in Marketing",
+          "popularity_growth": "75%",
+          "key_drivers": [
+            "Increased AI adoption in automation",
+            "Rising interest in personalized marketing"
+          ],
+          "impact_on_market": "High",
+          "supporting_sources": [
+            {
+              "source_name": "Google Trends",
+              "link": "https://trends.google.com/example"
+            },
+            {
+              "source_name": "Industry Report",
+              "link": "https://example.com/ai-marketing-report"
+            }
+          ]
+        },
+        {
+          "trend_name": "Sustainable Tech",
+          "popularity_growth": "60%",
+          "key_drivers": [
+            "Consumer demand for eco-friendly products",
+            "Regulatory changes promoting sustainability"
+          ],
+          "impact_on_market": "Medium",
+          "supporting_sources": [
+            {
+              "source_name": "Social Media",
+              "link": "https://twitter.com/trending_topic"
+            }
+          ]
+        }
+      ]
+    }
+    ```
+
+  notes: |
+    - Ensure all trends are backed by credible data sources.
+    - Each trend should have at least two supporting sources.
+    - Analysis should include potential business impact and future predictions.
+
+    
+
+
 # Research: Voice of Customer → Extract customer feedback & sentiment for improvements
 # Research: Category-Specific Nuances → Understand SEO rules for the product category
 # Research: Assessment of Current Listing → Audit existing content for gaps & weaknesses
