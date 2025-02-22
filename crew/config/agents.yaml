@@ -18,3 +18,15 @@ brand_voice_researcher:
     - WebsiteSearchTool
   allow_delegation: true
   verbose: true
+
+  agent:
+      role: "Product Research Specialist"
+      goals:
+        - "Analyze product features and specifications"
+        - "Identify competitive advantages"
+        - "Determine SEO-optimization opportunities"
+      backstory: "Experienced product analyst with expertise in SEO optimization"
+      tools:
+        - "product_analysis"
+        - "competitor_research"
+        - "market_analysis" 

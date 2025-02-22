@@ -1,6 +1,3 @@
-
-## Agentic SEO Workflow
-
 # Tasks:
 
 # Agentic Workflow for SEO Optimization
@@ -9,50 +6,85 @@
 
 ## Goal: Gather data to ensure informed SEO optimization.
 
-# Research: Brand Voice → Ensure consistency with brand tone & messaging
+# Task 1: Research: Brand Voice → Ensure consistency with brand tone & messaging
 research_brand_voice:
+  id: "task_001"
+  name: "Brand Voice Analysis"
+
   description: |
-    Conduct research to ensure consistency with the brand’s messaging.  
-    The research should analyze tone, style, and key messaging elements  
-    aligned with the brand's identity.  
-    Additionally, incorporate SEO best practices to enhance brand awareness  
-    and visibility in search engines.  
+      Conduct research to ensure consistency with the brand’s messaging.  
+      The research should analyze tone, style, and key messaging elements  
+      aligned with the brand's identity.  
+      Additionally, incorporate SEO best practices to enhance brand awareness  
+      and visibility in search engines. 
 
-  expected_output: |
-    JSON object structured as follows:
-    ```json
-    {
-      "brand_tone": "Concise description of the brand's tone",
-      "key_messaging": [
-        "List of core messaging points"
-      ],
-      "style_guidelines": {
-        "writing_style": "Formal/Informal/Conversational",
-        "preferred_vocabulary": ["word1", "word2"]
-      },
-      "seo_recommendations": {
-        "keywords": ["keyword1", "keyword2"],
-        "meta_description": "Suggested meta description following SEO guidelines"
-      }
-    }
-    ```
+  agent:
+      role: "Brand Voice Researcher"
+      goals:
+        - "Analyze brand tone and messaging elements"
+        - "Identify SEO-friendly brand language patterns"
+        - "Develop consistent voice guidelines"
+      backstory: 
+      You are a seasoned Branding and SEO expert with extensive experience in digital marketing, content strategy, and audience engagement. Your ability to analyze tone, sentiment, and 
+      keyword optimization makes you the go-to expert for shaping a brand’s voice. With a keen eye for detail, you ensure that every piece of content aligns with the brand’s personality and search engine best practices.
+      tools:
+        - "content_analysis"
+        - "sentiment_analysis"
+        - "seo_tools"
+      allow_delegation: true
+      verbose: true
 
+      prompt:
+        system: |
+          As a Brand Voice Analyst, analyze the brand's communication style, tone, 
+          and messaging patterns while considering SEO optimization opportunities.
+          Focus on maintaining authenticity while enhancing search visibility.
+        
+        task: |
+          1. Analyze existing brand communications
+          2. Identify core tone and style elements
+          3. Evaluate current SEO performance of brand messaging
+          4. Develop guidelines for SEO-optimized brand voice
+          5. Suggest improvements for visibility while maintaining brand integrity
+
+      expected_output: |
+          JSON object structured as follows:
+          ```json
+          {
+            "brand_tone": "Concise description of the brand's tone",
+            "key_messaging": [
+              "List of core messaging points"
+            ],
+            "style_guidelines": {
+              "writing_style": "Formal/Informal/Conversational",
+              "preferred_vocabulary": ["word1", "word2"]
+            },
+            "seo_recommendations": {
+              "keywords": ["keyword1", "keyword2"],
+              "meta_description": "Suggested meta description following SEO guidelines"
+            }
+          }
+          ```
 
 # Research: Product Specifics → Understand key product attributes & features
-research_Product_Specifics:
+ research_product_specifics:
+  id: "task_002"
+  name: "Product Specifics Analysis"
   description: |
-    Extract and analyze key product attributes and features, including specifications, competitive advantages, and unique selling points.
-    
-  input_parameters:
-    product_name: 
-      type: string
-      description: "The name of the product to be researched."
-    category:
-      type: string
-      description: "The category of the product (e.g., electronics, fashion, software)."
-    competitors:
-      type: list
-      description: "A list of competitor products for comparison."
+    Conduct detailed analysis of product attributes, features, and market positioning
+      with focus on SEO optimization opportunities.
+
+  agent:
+      role: "Product Research Specialist"
+      goals:
+        - "Analyze product features and specifications"
+        - "Identify competitive advantages"
+        - "Determine SEO-optimization opportunities"
+      backstory: "Experienced product analyst with expertise in SEO optimization"
+      tools:
+        - "product_analysis"
+        - "competitor_research"
+        - "market_analysis" 
 
   expected_output: |
     JSON object structured as follows:
@@ -78,27 +110,38 @@ research_Product_Specifics:
     - Provide citations or reference points where applicable.
     - The JSON output should be structured and formatted properly.
 
-
 # Research: Keyword Research → Identify high-impact keywords for visibility
 keyword_research:
+  id: "task_003"
+  name: "Rich Semantic Keyword Analysis"
+  
   description: |
-    Utilize AI-powered keyword research tools to identify high-value search terms for SEO and marketing.
-    The agent will analyze search volume, competition, and relevancy to suggest optimal keywords.
+    Perform comprehensive semantic keyword research to identify contextually 
+      relevant terms and optimize content visibility.
 
-  input_parameters:
-    target_audience:
-      type: string
-      description: "The primary audience or niche for which keyword research is conducted."
-    product_or_topic:
-      type: string
-      description: "The main product, service, or topic to focus the keyword research on."
-    competitor_analysis:
-      type: boolean
-      description: "Flag to indicate whether competitor keyword analysis should be included."
-    keyword_type:
-      type: list
-      description: "Specify if the focus is on short-tail, long-tail, or LSI (Latent Semantic Indexing) keywords."
-      options: ["short-tail", "long-tail", "LSI"]
+  agent:
+      role: "Semantic SEO Specialist"
+      goals:
+        - "Identify high-value semantic keyword clusters"
+        - "Analyze search intent patterns"
+        - "Develop comprehensive keyword strategy"
+      backstory: "Expert in semantic SEO with focus on AI-driven keyword research"
+      tools:
+        - "semantic_analysis"
+        - "keyword_research"
+        - "intent_analysis"
+
+    prompt:
+      system: |
+        As a Semantic SEO Specialist, analyze and identify semantically related 
+        keywords that enhance content visibility while maintaining contextual relevance.
+      
+      task: |
+        1. Analyze existing keyword performance
+        2. Identify semantic keyword clusters
+        3. Evaluate search intent patterns
+        4. Develop recommendations for keyword optimization
+        5. Prioritize keywords based on potential impact
 
   expected_output: |
     JSON object structured as follows:
@@ -108,7 +151,6 @@ keyword_research:
       "product_or_topic": "Example Product or Topic",
       "target_audience": "Example Target Audience",
       "high_value_ke
-
 
 # Research: Rich Semantic Keyword  -> Identify contextually relevant and SEO-rich keywords, including primary, long-tail, and LSI terms, to enhance product visibility. Analyze search intent, competitor keywords, and AI-driven insights to create a diverse, high-impact keyword set for optimization.
 research_rich_semantic_keywords:
@@ -147,7 +189,6 @@ research_rich_semantic_keywords:
       "recommended_keywords": ["future AI trends", "predictive analytics AI"]
     }
     ```
-
 
 # Research: Competitor Analysis → Analyze top-ranking competitors for insights
 research_competitor_analysis:
@@ -213,7 +254,6 @@ research_competitor_analysis:
     - Competitor analysis should be based on reliable data sources such as web scraping, SEO tools, and customer reviews.
     - The JSON output should be structured and formatted properly.
     - If multiple competitors are analyzed, ensure a comparative analysis is presented.
-
 
 # Research: Trends → Discover emerging trends in the product category
 research_trends:
@@ -288,11 +328,51 @@ research_trends:
     - Each trend should have at least two supporting sources.
     - Analysis should include potential business impact and future predictions.
 
-    
-
-
 # Research: Voice of Customer → Extract customer feedback & sentiment for improvements
+voice_of_customer_researcher:
+  role: >
+    Voice of Customer (VoC) Researcher
+  goal: >
+    Extract, analyze, and interpret customer feedback to improve brand messaging, 
+    customer experience, and overall brand perception. Utilize sentiment analysis 
+    and customer insights to identify trends, strengths, and areas for improvement.
+  backstory: >
+    You are a consumer psychology and market research expert, specializing in 
+    analyzing customer sentiment across various platforms, including surveys, 
+    reviews, and social media. Your deep understanding of audience perception 
+    allows you to pinpoint what resonates with customers and what needs refinement.  
+    Your insights drive strategic improvements in brand communication and customer engagement.
+  tools:
+    - SentimentAnalysisTool
+    - SurveyAnalysisTool
+    - CustomerReviewScraperTool
+    - SocialListeningTool
+  allow_delegation: true
+  verbose: true
+
 # Research: Category-Specific Nuances → Understand SEO rules for the product category
+category_seo_researcher:
+  role: >
+    Category-Specific SEO Researcher
+  goal: >
+    Research and analyze SEO best practices tailored to the specific product category. 
+    Ensure all content follows industry-specific ranking rules and search engine guidelines 
+    to improve visibility, discoverability, and engagement.
+  backstory: >
+    You are a highly skilled SEO strategist with expertise in industry-specific 
+    search engine ranking factors. Your experience includes technical SEO, 
+    keyword optimization, and competitive analysis. You understand how different 
+    product categories require unique SEO strategies to maximize their search performance.  
+    Your insights help shape data-driven content that aligns with Google’s latest 
+    algorithms and industry trends.
+  tools:
+    - SEOKeywordResearchTool
+    - CompetitorSEOAnalysisTool
+    - SERPMonitoringTool
+    - SchemaMarkupValidatorTool
+  allow_delegation: true
+  verbose: true
+
 # Research: Assessment of Current Listing → Audit existing content for gaps & weaknesses
 # Research: Platform Policies → Ensure compliance with Amazon SEO & listing guidelines
 

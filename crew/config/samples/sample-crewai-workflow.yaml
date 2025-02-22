@@ -1,0 +1,111 @@
+# CrewAI Research Team Workflow
+
+# Step 1: Team Configuration
+team_config:
+  name: "research_team_${TEAM_ID}"
+  description: "Specialized research team focused on ${RESEARCH_DOMAIN}"
+  max_agents: 3
+  max_tasks_per_agent: 7
+
+# Step 2: Task Template Structure
+task_template:
+  id: "task_${TASK_ID}"
+  name: ""
+  description: ""
+  agent:
+    role: ""
+    goals: []
+    backstory: ""
+    tools: []
+  prompt:
+    system: ""
+    task: ""
+    context: ""
+  expected_output:
+    format: "json"
+    schema:
+      type: "object"
+      properties: {}
+      required: []
+
+# Step 3: Agent Configuration Template
+agent_template:
+  id: "agent_${AGENT_ID}"
+  name: ""
+  role: ""
+  goals:
+    - ""
+  backstory: ""
+  tools:
+    - "web_search"
+    - "document_analysis"
+    - "data_processing"
+  verbose: true
+  allow_delegation: true
+
+# Step 4: Task Definition Process
+task_definition_process:
+  steps:
+    - step: "Initialize Task"
+      action: "Create new task YAML file"
+      template: "tasks/${TEAM_ID}/${TASK_ID}.yaml"
+    
+    - step: "Define Task Parameters"
+      action: "Fill task metadata"
+      fields:
+        - name: "Task Name"
+        - description: "Task Description"
+        - role: "Required Agent Role"
+        - goals: "Task-specific Goals"
+    
+    - step: "Configure Prompt"
+      action: "Define prompt structure"
+      components:
+        - system_context: "Define system-level instructions"
+        - task_description: "Specific task requirements"
+        - output_format: "Expected response format"
+    
+    - step: "Set Success Criteria"
+      action: "Define expected outputs"
+      format:
+        type: "json"
+        validation_schema: "schemas/${TASK_ID}_schema.json"
+
+# Step 5: Integration Configuration
+integration_config:
+  api_wrapper:
+    base_url: "/api/v1/teams/${TEAM_ID}"
+    endpoints:
+      - path: "/tasks"
+        methods: ["GET", "POST"]
+      - path: "/tasks/${TASK_ID}"
+        methods: ["GET", "PUT", "DELETE"]
+      - path: "/agents"
+        methods: ["GET", "POST"]
+    authentication:
+      type: "bearer"
+      token_env: "CREW_API_TOKEN"
+
+# Step 6: Task Output Schema Template
+task_output_schema:
+  type: "object"
+  properties:
+    task_id:
+      type: "string"
+    completion_status:
+      type: "string"
+      enum: ["success", "failure", "in_progress"]
+    output_data:
+      type: "object"
+      properties: {}
+    metadata:
+      type: "object"
+      properties:
+        start_time:
+          type: "string"
+          format: "date-time"
+        end_time:
+          type: "string"
+          format: "date-time"
+        agent_id:
+          type: "string"

@@ -1,0 +1,247 @@
+# SEO Optimization Research Crew Configuration
+
+team_config:
+  name: "seo_research_crew"
+  description: "Specialized crew for comprehensive SEO research and optimization"
+  max_agents: 3
+  max_tasks_per_agent: 7
+
+# Task Definitions
+
+tasks:
+
+  # Task 1: Brand Voice Research
+  brand_voice_analysis:
+    id: "task_001"
+    name: "Brand Voice Analysis"
+    description: |
+      Conduct comprehensive research to ensure consistency with brand messaging 
+      while incorporating SEO best practices for enhanced visibility.
+    
+    agent:
+      role: "Brand Voice Analyst"
+      goals:
+        - "Analyze brand tone and messaging elements"
+        - "Identify SEO-friendly brand language patterns"
+        - "Develop consistent voice guidelines"
+      backstory: "Expert in brand communications with deep SEO knowledge"
+      tools:
+        - "content_analysis"
+        - "sentiment_analysis"
+        - "seo_tools"
+
+    prompt:
+      system: |
+        As a Brand Voice Analyst, analyze the brand's communication style, tone, 
+        and messaging patterns while considering SEO optimization opportunities.
+        Focus on maintaining authenticity while enhancing search visibility.
+      
+      task: |
+        1. Analyze existing brand communications
+        2. Identify core tone and style elements
+        3. Evaluate current SEO performance of brand messaging
+        4. Develop guidelines for SEO-optimized brand voice
+        5. Suggest improvements for visibility while maintaining brand integrity
+
+    expected_output:
+      format: "json"
+      schema:
+        type: "object"
+        properties:
+          brand_tone:
+            type: "string"
+            description: "Concise description of the brand's tone"
+          key_messaging:
+            type: "array"
+            items:
+              type: "string"
+          style_guidelines:
+            type: "object"
+            properties:
+              writing_style:
+                type: "string"
+                enum: ["Formal", "Informal", "Conversational"]
+              preferred_vocabulary:
+                type: "array"
+                items:
+                  type: "string"
+          seo_recommendations:
+            type: "object"
+            properties:
+              keywords:
+                type: "array"
+                items:
+                  type: "string"
+              meta_description:
+                type: "string"
+
+  # Task 2: Product Research
+  research_product_specifics:
+    id: "task_002"
+    name: "Product Specifics Analysis"
+    description: |
+      Conduct detailed analysis of product attributes, features, and market positioning
+      with focus on SEO optimization opportunities.
+
+    agent:
+      role: "Product Research Specialist"
+      goals:
+        - "Analyze product features and specifications"
+        - "Identify competitive advantages"
+        - "Determine SEO-optimization opportunities"
+      backstory: "Experienced product analyst with expertise in SEO optimization"
+      tools:
+        - "product_analysis"
+        - "competitor_research"
+        - "market_analysis"
+
+    input_parameters:
+      product_name:
+        type: "string"
+        description: "Product name for analysis"
+      category:
+        type: "string"
+        description: "Product category"
+      competitors:
+        type: "array"
+        items:
+          type: "string"
+        description: "List of competitor products"
+
+    expected_output:
+      format: "json"
+      schema:
+        type: "object"
+        properties:
+          product_analysis:
+            type: "object"
+            properties:
+              name:
+                type: "string"
+              category:
+                type: "string"
+              features:
+                type: "array"
+                items:
+                  type: "object"
+                  properties:
+                    name:
+                      type: "string"
+                    description:
+                      type: "string"
+                    seo_relevance:
+                      type: "string"
+          competitive_analysis:
+            type: "object"
+            properties:
+              advantages:
+                type: "array"
+                items:
+                  type: "string"
+              opportunities:
+                type: "array"
+                items:
+                  type: "string"
+          seo_recommendations:
+            type: "object"
+            properties:
+              primary_keywords:
+                type: "array"
+                items:
+                  type: "string"
+              feature_specific_terms:
+                type: "array"
+                items:
+                  type: "string"
+
+  # Task 3: Semantic Keyword Research
+  semantic_keyword_analysis:
+    id: "task_003"
+    name: "Rich Semantic Keyword Analysis"
+    description: |
+      Perform comprehensive semantic keyword research to identify contextually 
+      relevant terms and optimize content visibility.
+
+    agent:
+      role: "Semantic SEO Specialist"
+      goals:
+        - "Identify high-value semantic keyword clusters"
+        - "Analyze search intent patterns"
+        - "Develop comprehensive keyword strategy"
+      backstory: "Expert in semantic SEO with focus on AI-driven keyword research"
+      tools:
+        - "semantic_analysis"
+        - "keyword_research"
+        - "intent_analysis"
+
+    prompt:
+      system: |
+        As a Semantic SEO Specialist, analyze and identify semantically related 
+        keywords that enhance content visibility while maintaining contextual relevance.
+      
+      task: |
+        1. Analyze existing keyword performance
+        2. Identify semantic keyword clusters
+        3. Evaluate search intent patterns
+        4. Develop recommendations for keyword optimization
+        5. Prioritize keywords based on potential impact
+
+    expected_output:
+      format: "json"
+      schema:
+        type: "object"
+        properties:
+          thematic_groups:
+            type: "array"
+            items:
+              type: "object"
+              properties:
+                group_name:
+                  type: "string"
+                keywords:
+                  type: "array"
+                  items:
+                    type: "string"
+                search_intent:
+                  type: "string"
+          semantic_relationships:
+            type: "object"
+            properties:
+              close_match:
+                type: "array"
+                items:
+                  type: "string"
+              loose_match:
+                type: "array"
+                items:
+                  type: "string"
+              complementary:
+                type: "array"
+                items:
+                  type: "string"
+          prioritized_keywords:
+            type: "array"
+            items:
+              type: "object"
+              properties:
+                keyword:
+                  type: "string"
+                priority_score:
+                  type: "number"
+                rationale:
+                  type: "string"
+
+# Integration Configuration
+integration_config:
+  api_wrapper:
+    base_url: "/api/v1/seo-research"
+    endpoints:
+      - path: "/brand-voice"
+        methods: ["GET", "POST"]
+      - path: "/product-analysis"
+        methods: ["GET", "POST"]
+      - path: "/semantic-keywords"
+        methods: ["GET", "POST"]
+    authentication:
+      type: "bearer"
+      token_env: "SEO_CREW_API_TOKEN"
