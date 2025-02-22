@@ -154,7 +154,7 @@ keyword_research:
 
 # Research: Rich Semantic Keyword  -> Identify contextually relevant and SEO-rich keywords, including primary, long-tail, and LSI terms, to enhance product visibility. Analyze search intent, competitor keywords, and AI-driven insights to create a diverse, high-impact keyword set for optimization.
 research_rich_semantic_keywords:
-  id: "task_003"
+  id: "task_004"
   name: "Rich Semantic Keyword Analysis"
   description: |
     After analyzing all key exact-match keywords, identify closely semantically related keywords 
@@ -238,25 +238,35 @@ research_rich_semantic_keywords:
 
 # Research: Competitor Analysis → Analyze top-ranking competitors for insights
 research_competitor_analysis:
-  description: |
-    Conduct in-depth competitor analysis using AI-powered research agents.
-    This includes identifying competitors, analyzing their product attributes, SEO strategies, and market positioning.
-    The research will highlight key competitive advantages and opportunities.
+ id: "task_005"
+name: "Competitor Intelligence Analysis"
+description: |
+  Conduct in-depth competitor analysis using AI-powered research agents.
+  This includes identifying competitors, analyzing their product attributes, SEO strategies, and market positioning.
+  The research will highlight key competitive advantages and opportunities.
 
-  input_parameters:
-    target_market:
-      type: string
-      description: "The market or industry to analyze (e.g., SaaS, eCommerce, Automotive)."
-    product_name:
-      type: string
-      description: "The name of the product being analyzed."
-    competitors:
-      type: list
-      description: "A list of competitor names or brands for comparison."
-    analysis_type:
-      type: list
-      description: "Specify the focus of the competitor analysis."
-      options: ["SEO", "Product Features", "Pricing", "Marketing Strategy", "Customer Sentiment"]
+agent:
+      role: "Semantic SEO Specialist"
+      goals:
+        - "Identify high-value semantic keyword clusters"
+        - "Analyze search intent patterns"
+        - "Develop comprehensive keyword strategy"
+      backstory: "Expert in semantic SEO with focus on AI-driven keyword research"
+      tools:
+        - "semantic_analysis"
+        - "keyword_research"
+        - "intent_analysis"
+
+    prompt:
+      system: |
+        As a Semantic SEO Specialist, analyze and identify semantically related 
+        keywords that enhance content visibility while maintaining contextual relevance.
+      task: |
+        1. Analyze existing keyword performance
+        2. Identify semantic keyword clusters
+        3. Evaluate search intent patterns
+        4. Develop recommendations for keyword optimization
+        5. Prioritize keywords based on potential impact
 
   expected_output: |
     JSON object structured as follows:
@@ -303,25 +313,50 @@ research_competitor_analysis:
 
 # Research: Trends → Discover emerging trends in the product category
 research_trends:
+  id: "task_005"
+  name: "Market Trends Analysis"
   description: |
-    Conduct trend analysis to identify emerging market patterns, consumer behavior shifts, 
-    and industry innovations. This research helps businesses stay ahead of competitors 
-    and adapt their strategies effectively.
+    Conduct comprehensive trend analysis to identify emerging market patterns,
+    consumer behavior shifts, and industry innovations. This research enables
+    businesses to anticipate changes, adapt strategies proactively, and
+    maintain competitive advantage in dynamic markets.
+ 
+ agent:
+    role: "Trend Analysis Specialist"
+    goals:
+      - "Identify emerging market trends and patterns"
+      - "Analyze consumer behavior shifts"
+      - "Track technological innovations and industry disruptions"
+      - "Evaluate competitive landscape evolution"
+      - "Predict future market directions"
+    backstory: "Expert market analyst with experience in trend forecasting and consumer behavior analysis"
+    
+    #tools
 
-  input_parameters:
-    industry:
-      type: string
-      description: "The specific industry or market to analyze (e.g., technology, fashion, healthcare)."
-    timeframe:
-      type: string
-      description: "The period for trend analysis (e.g., last 6 months, past year, upcoming trends)."
-    data_sources:
-      type: list
-      description: "Sources for data collection (e.g., Google Trends, social media, industry reports)."
-      options: ["Google Trends", "Social Media", "News Articles", "Industry Reports", "Competitor Analysis"]
-    geographic_focus:
-      type: string
-      description: "Specify a region or global scope for trend research."
+    prompt:
+    system: |
+      As a Trend Analysis Specialist, analyze market dynamics, consumer behavior patterns,
+      and industry innovations to identify actionable insights and future opportunities.
+      Focus on both quantitative metrics and qualitative indicators that signal emerging trends.
+    
+    task: |
+      1. Analyze historical market data to identify established patterns
+      2. Track emerging trends across specified focus areas
+      3. Evaluate consumer behavior shifts and their implications
+      4. Assess technological innovations and their market impact
+      5. Monitor competitive landscape changes
+      6. Predict future market directions and opportunities
+      7. Develop actionable recommendations based on findings
+
+    context: |
+      Consider:
+      - Market dynamics and economic factors
+      - Consumer preference shifts
+      - Technological advancements
+      - Regulatory changes
+      - Competitive landscape evolution
+      - Global and regional influences
+
 
   expected_output: |
     JSON object structured as follows:
