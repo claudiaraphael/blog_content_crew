@@ -1,2 +1,4 @@
 # seo_content_crew
-SEO Optimized agentic workflow for Amazon Listings made with Crew.ai
+Optimized Agentic Workflow for SEO-optimized Blog content creation. 
+
+Made with Crew.ai
