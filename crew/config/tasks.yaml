@@ -154,6 +154,8 @@ keyword_research:
 
 # Research: Rich Semantic Keyword  -> Identify contextually relevant and SEO-rich keywords, including primary, long-tail, and LSI terms, to enhance product visibility. Analyze search intent, competitor keywords, and AI-driven insights to create a diverse, high-impact keyword set for optimization.
 research_rich_semantic_keywords:
+  id: "task_003"
+  name: "Rich Semantic Keyword Analysis"
   description: |
     After analyzing all key exact-match keywords, identify closely semantically related keywords 
     that do not contain the same words but share the same meaning.
@@ -168,6 +170,50 @@ research_rich_semantic_keywords:
       - **Substitute keywords**: Alternative keywords that could replace or outperform existing ones.
 
     Finally, recommend additional keywords that should be prioritized.
+  
+      agent:
+      role: "Semantic SEO Specialist"
+      goals:
+        - "Identify high-value semantic keyword clusters"
+        - "Analyze search intent patterns"
+        - "Develop comprehensive keyword strategy"
+      backstory: "Expert in semantic SEO with focus on AI-driven keyword research"
+      tools:
+        - "semantic_analysis"
+        - "keyword_research"
+        - "intent_analysis"
+
+    prompt:
+      system: |
+        As a Semantic SEO Specialist, analyze and identify semantically related 
+        keywords that enhance content visibility while maintaining contextual relevance.
+      
+      task: |
+        1. Analyze existing keyword performance
+        2. Identify semantic keyword clusters
+        3. Evaluate search intent patterns
+        4. Develop recommendations for keyword optimization
+        5. Prioritize keywords based on potential impact
+    
+    
+  agent:
+      role: "Semantic SEO Specialist"
+      goals:
+        - "Identify high-value semantic keyword clusters"
+        - "Analyze search intent patterns"
+        - "Develop comprehensive keyword strategy"
+      backstory: "Expert in semantic SEO with focus on AI-driven keyword research"
+      tools:
+          - "semantic_analysis"
+          - "keyword_research"
+          - "intent_analysis"
+
+          
+    prompt:
+        system: |
+          As a Semantic SEO Specialist, analyze and identify semantically related 
+          keywords that enhance content visibility while maintaining contextual relevance.
+        
   
   expected_output: |
     JSON object structured as follows:
