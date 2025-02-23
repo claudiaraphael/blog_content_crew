@@ -238,78 +238,78 @@ research_rich_semantic_keywords:
 
 # Research: Competitor Analysis → Analyze top-ranking competitors for insights
 research_competitor_analysis:
- id: "task_005"
-name: "Competitor Intelligence Analysis"
-description: |
-  Conduct in-depth competitor analysis using AI-powered research agents.
-  This includes identifying competitors, analyzing their product attributes, SEO strategies, and market positioning.
-  The research will highlight key competitive advantages and opportunities.
+  id: "task_005"
+  name: "Competitor Intelligence Analysis"
+  description: |
+    Conduct in-depth competitor analysis using AI-powered research agents.
+    This includes identifying competitors, analyzing their product attributes, SEO strategies, and market positioning.
+    The research will highlight key competitive advantages and opportunities.
 
-agent:
-      role: "Semantic SEO Specialist"
-      goals:
-        - "Identify high-value semantic keyword clusters"
-        - "Analyze search intent patterns"
-        - "Develop comprehensive keyword strategy"
-      backstory: "Expert in semantic SEO with focus on AI-driven keyword research"
-      tools:
-        - "semantic_analysis"
-        - "keyword_research"
-        - "intent_analysis"
+  agent:
+        role: "Semantic SEO Specialist"
+        goals:
+          - "Identify high-value semantic keyword clusters"
+          - "Analyze search intent patterns"
+          - "Develop comprehensive keyword strategy"
+        backstory: "Expert in semantic SEO with focus on AI-driven keyword research"
+        tools:
+          - "semantic_analysis"
+          - "keyword_research"
+          - "intent_analysis"
 
-    prompt:
-      system: |
-        As a Semantic SEO Specialist, analyze and identify semantically related 
-        keywords that enhance content visibility while maintaining contextual relevance.
-      task: |
-        1. Analyze existing keyword performance
-        2. Identify semantic keyword clusters
-        3. Evaluate search intent patterns
-        4. Develop recommendations for keyword optimization
-        5. Prioritize keywords based on potential impact
+      prompt:
+        system: |
+          As a Semantic SEO Specialist, analyze and identify semantically related 
+          keywords that enhance content visibility while maintaining contextual relevance.
+        task: |
+          1. Analyze existing keyword performance
+          2. Identify semantic keyword clusters
+          3. Evaluate search intent patterns
+          4. Develop recommendations for keyword optimization
+          5. Prioritize keywords based on potential impact
 
-  expected_output: |
-    JSON object structured as follows:
-    
-    ```json
-    {
-      "product_name": "Example Product",
-      "target_market": "Example Industry",
-      "competitor_analysis": [
-        {
-          "competitor": "Competitor A",
-          "market_positioning": "Leader in budget-friendly options",
-          "product_features": {
-            "feature_1": "Description of feature 1",
-            "feature_2": "Description of feature 2"
-          },
-          "pricing": {
-            "base_price": 49.99,
-            "subscription_options": ["Monthly", "Yearly"]
-          },
-          "SEO_strategy": {
-            "top_keywords": ["keyword1", "keyword2"],
-            "organic_traffic": 500000,
-            "backlink_count": 1200
-          },
-          "marketing_strategy": {
-            "channels": ["Social Media", "Email Marketing"],
-            "campaign_success": "High engagement on Instagram and YouTube"
-          },
-          "customer_sentiment": {
-            "positive_reviews": 85,
-            "negative_reviews": 15,
-            "common_complaints": ["Limited customization", "High learning curve"]
+    expected_output: |
+      JSON object structured as follows:
+      
+      ```json
+      {
+        "product_name": "Example Product",
+        "target_market": "Example Industry",
+        "competitor_analysis": [
+          {
+            "competitor": "Competitor A",
+            "market_positioning": "Leader in budget-friendly options",
+            "product_features": {
+              "feature_1": "Description of feature 1",
+              "feature_2": "Description of feature 2"
+            },
+            "pricing": {
+              "base_price": 49.99,
+              "subscription_options": ["Monthly", "Yearly"]
+            },
+            "SEO_strategy": {
+              "top_keywords": ["keyword1", "keyword2"],
+              "organic_traffic": 500000,
+              "backlink_count": 1200
+            },
+            "marketing_strategy": {
+              "channels": ["Social Media", "Email Marketing"],
+              "campaign_success": "High engagement on Instagram and YouTube"
+            },
+            "customer_sentiment": {
+              "positive_reviews": 85,
+              "negative_reviews": 15,
+              "common_complaints": ["Limited customization", "High learning curve"]
+            }
           }
-        }
-      ]
-    }
-    ```
+        ]
+      }
+      ```
 
-  notes: |
-    - Competitor analysis should be based on reliable data sources such as web scraping, SEO tools, and customer reviews.
-    - The JSON output should be structured and formatted properly.
-    - If multiple competitors are analyzed, ensure a comparative analysis is presented.
+    notes: |
+      - Competitor analysis should be based on reliable data sources such as web scraping, SEO tools, and customer reviews.
+      - The JSON output should be structured and formatted properly.
+      - If multiple competitors are analyzed, ensure a comparative analysis is presented.
 
 # Research: Trends → Discover emerging trends in the product category
 research_trends:
@@ -320,8 +320,7 @@ research_trends:
     consumer behavior shifts, and industry innovations. This research enables
     businesses to anticipate changes, adapt strategies proactively, and
     maintain competitive advantage in dynamic markets.
- 
- agent:
+  agent:
     role: "Trend Analysis Specialist"
     goals:
       - "Identify emerging market trends and patterns"
@@ -411,6 +410,11 @@ research_trends:
 
 # Research: Voice of Customer → Extract customer feedback & sentiment for improvements
 voice_of_customer_researcher:
+  id: "task_006"
+  name: "Market Trends Analysis"
+  description: | 
+    ...
+  Agent:
   role: >
     Voice of Customer (VoC) Researcher
   goal: >
@@ -432,51 +436,44 @@ voice_of_customer_researcher:
   verbose: true
 
 # Research: Category-Specific Nuances → Understand SEO rules for the product category
-category_seo_researcher:
-  role: >
-    Category-Specific SEO Researcher
-  goal: >
-    Research and analyze SEO best practices tailored to the specific product category. 
-    Ensure all content follows industry-specific ranking rules and search engine guidelines 
-    to improve visibility, discoverability, and engagement.
-  backstory: >
-    You are a highly skilled SEO strategist with expertise in industry-specific 
-    search engine ranking factors. Your experience includes technical SEO, 
-    keyword optimization, and competitive analysis. You understand how different 
-    product categories require unique SEO strategies to maximize their search performance.  
-    Your insights help shape data-driven content that aligns with Google’s latest 
-    algorithms and industry trends.
-  tools:
-    - SEOKeywordResearchTool
-    - CompetitorSEOAnalysisTool
-    - SERPMonitoringTool
-    - SchemaMarkupValidatorTool
-  allow_delegation: true
-  verbose: true
+research_category_specific_nuances:
+    id: "task_007"
+    name: "Market Trends Analysis"
+
+    category_seo_researcher:
+      role: >
+        Category-Specific SEO Researcher
+      goal: >
+        Research and analyze SEO best practices tailored to the specific product category. 
+        Ensure all content follows industry-specific ranking rules and search engine guidelines 
+        to improve visibility, discoverability, and engagement.
+      backstory: >
+        You are a highly skilled SEO strategist with expertise in industry-specific 
+        search engine ranking factors. Your experience includes technical SEO, 
+        keyword optimization, and competitive analysis. You understand how different 
+        product categories require unique SEO strategies to maximize their search performance.  
+        Your insights help shape data-driven content that aligns with Google’s latest 
+        algorithms and industry trends.
+      tools:
+        - SEOKeywordResearchTool
+        - CompetitorSEOAnalysisTool
+        - SERPMonitoringTool
+        - SchemaMarkupValidatorTool
+      allow_delegation: true
+      verbose: true
 
 # Research: Assessment of Current Listing → Audit existing content for gaps & weaknesses
+research_assessment_current_content:
+    id: "task_008"
+    name: "Market Trends Analysis"
+    description: |
+    ...
+
 # Research: Platform Policies → Ensure compliance with Amazon SEO & listing guidelines
+research_platform_policies:
+    id: "task_009"
+    name: "Market Trends Analysis"
+    description: |
+    ...
 
-# 2. Content Strategy & Planning Phase
-# Goal: Define a structured plan for SEO-optimized content creation.
-# Generate: Plan of Action → Outline the SEO strategy based on research findings
 
-# 3. Content Creation & Optimization Phase
-# Goal: Generate high-quality, SEO-optimized content based on research insights.
-# Generate: Optimized Product Title → Craft an attention-grabbing, keyword-rich product title
-# Generate: Key Product Features → Highlight product benefits in an SEO-friendly format
-# Generate: Product Description → Create a compelling, SEO-optimized product description
-# Generate: Generic Search Keywords → Find additional relevant search terms
-# Generate: Image Messaging Outline → Define how images communicate product benefits
-# Generate: A+ Content Blocks Outline → Plan enhanced Amazon A+ marketing content
-
-# 4. Quality Assurance & Compliance Phase
-# Goal: Validate that the content meets best practices and policy guidelines.
-# QA: Best Practices → Ensure the content follows SEO & Amazon listing best practices
-# QA: Amazon Policy Compliance (RAG) → Check content for compliance with Amazon’s guidelines
-
-# 5. Export & Deployment Phase
-# Goal: Store, distribute, and share optimized content efficiently.
-# Export: Save in Mongo → Store the final content in a database
-# Export: Create Office Document → Generate a downloadable version for stakeholders
-# Export: Send to Notification Service → Notify relevant teams about the new content
