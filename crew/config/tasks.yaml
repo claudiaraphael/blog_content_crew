@@ -3,52 +3,70 @@
 # Agentic Workflow for SEO Optimization
 
 ## 1. Research Phase (Understanding the Product & Market)
-
 ## Goal: Gather data to ensure informed SEO optimization.
 
-# Task 1: Research: Brand Voice → Ensure consistency with brand tone & messaging
+# Research: Brand Voice → Ensure consistency with brand tone & messaging
 research_brand_voice:
   id: "task_001"
   name: "Brand Voice Analysis"
-
   description: |
       Conduct research to ensure consistency with the brand’s messaging.  
       The research should analyze tone, style, and key messaging elements  
       aligned with the brand's identity.  
       Additionally, incorporate SEO best practices to enhance brand awareness  
-      and visibility in search engines. 
+      and visibility in search engines.
+      
+      Provide a high-level meta-analysis of all executed tasks, assessing their effectiveness,  
+    quality, and overall impact.  
+    - Do **not** repeat individual outputs; instead, synthesize overarching insights.  
+    - Identify strengths, weaknesses, and provide a final quality rating.  
 
-  agent:
-      role: "Brand Voice Researcher"
-      goals:
-        - "Analyze brand tone and messaging elements"
-        - "Identify SEO-friendly brand language patterns"
-        - "Develop consistent voice guidelines"
-      backstory: 
-      You are a seasoned Branding and SEO expert with extensive experience in digital marketing, content strategy, and audience engagement. Your ability to analyze tone, sentiment, and 
-      keyword optimization makes you the go-to expert for shaping a brand’s voice. With a keen eye for detail, you ensure that every piece of content aligns with the brand’s personality and search engine best practices.
-      tools:
-        - "content_analysis"
-        - "sentiment_analysis"
-        - "seo_tools"
-      allow_delegation: true
-      verbose: true
+    ## Specify Return Format  
+    The output must strictly follow this **Markdown structure**:  
 
-      prompt:
-        system: |
-          As a Brand Voice Analyst, analyze the brand's communication style, tone, 
-          and messaging patterns while considering SEO optimization opportunities.
-          Focus on maintaining authenticity while enhancing search visibility.
+    ```markdown
+    # Final Meta-Analysis Report
+
+    ## Executive Summary  
+    *(High-level synthesis of the entire execution, summarizing the most important takeaways.)*  
+
+    ## Strengths  
+    *(Key aspects where the analysis and execution performed exceptionally well.)*  
+
+    ## Weaknesses  
+    *(Identify gaps, inconsistencies, or areas for refinement.)*  
+
+    ## Quality Rating  
+    - **Overall Score:** Excellent | Good | Needs Improvement | Poor  
+    - **Justification:** *(Explain why this rating was assigned.)*  
+
+    ## Final Recommendations  
+    *(Summarized, actionable recommendations for improvement.)*  
+    ```
+
+    ## Warnings and Requirements  
+    - **Strictly adhere to the Markdown format**—no deviations.  
+    - **No hallucinations**—only synthesize data from provided task outputs.  
+    - **Avoid generating new insights**—use only existing findings.  
+
+    ## Context  
+    All relevant execution data can be accessed here:  
+    **[Dynamically Inserted URL]**
+  prompt:
+    system: |
+      As a Brand Voice Analyst, analyze the brand's communication style, tone, 
+      and messaging patterns while considering SEO optimization opportunities.
+      Focus on maintaining authenticity while enhancing search visibility.
         
-        task: |
-          1. Analyze existing brand communications
-          2. Identify core tone and style elements
-          3. Evaluate current SEO performance of brand messaging
-          4. Develop guidelines for SEO-optimized brand voice
-          5. Suggest improvements for visibility while maintaining brand integrity
+    task: |
+      1. Analyze existing brand communications
+      2. Identify core tone and style elements
+      3. Evaluate current SEO performance of brand messaging
+      4. Develop guidelines for SEO-optimized brand voice
+      5. Suggest improvements for visibility while maintaining brand integrity
 
-      expected_output: |
-          JSON object structured as follows:
+    expected_output: |
+      JSON object structured as follows:
           ```json
           {
             "brand_tone": "Concise description of the brand's tone",
@@ -73,18 +91,6 @@ research_brand_voice:
   description: |
     Conduct detailed analysis of product attributes, features, and market positioning
       with focus on SEO optimization opportunities.
-
-  agent:
-      role: "Product Research Specialist"
-      goals:
-        - "Analyze product features and specifications"
-        - "Identify competitive advantages"
-        - "Determine SEO-optimization opportunities"
-      backstory: "Experienced product analyst with expertise in SEO optimization"
-      tools:
-        - "product_analysis"
-        - "competitor_research"
-        - "market_analysis" 
 
   expected_output: |
     JSON object structured as follows:

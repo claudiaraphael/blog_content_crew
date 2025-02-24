@@ -16,20 +16,29 @@ class seo_content_crew():
 @agent 
 def brand_voice_researcher(self) -> Agent:
   return Agent(
-  config = self.agents_config['brand voice researcher'],
-  llm = self.groq_llm
+   config = self.agents_config['Brand Voice Researcher'],
+   llm = self.groq_llm
     )
 
 @agent 
 def product_specifics_researcher(self) -> Agent:
   return Agent(
-  config = self.agents_config['brand voice researcher'],
+  config = self.agents_config['Product Research Specialist'],
   llm = self.groq_llm
     )
 
 
+
+
+
+
+
+
+
+
+
 # Understand the products unique features & benefits
-@task:
+@task
 def research_product_specifics(self) -> Agent:
    return Task(
       config = self.tasks_config['research_product_specifics']

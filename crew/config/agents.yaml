@@ -19,14 +19,41 @@ brand_voice_researcher:
   allow_delegation: true
   verbose: true
 
-  agent:
-      role: "Product Research Specialist"
-      goals:
-        - "Analyze product features and specifications"
-        - "Identify competitive advantages"
-        - "Determine SEO-optimization opportunities"
-      backstory: "Experienced product analyst with expertise in SEO optimization"
-      tools:
-        - "product_analysis"
-        - "competitor_research"
-        - "market_analysis" 
+product_specifics_researcher:
+
+  role: > 
+    Product Research Specialist
+  goals:
+    - "Analyze product features and specifications"
+    - "Identify competitive advantages"
+    - "Determine SEO-optimization opportunities"
+  backstory: "Experienced product analyst with expertise in SEO optimization"
+  tools:
+    - "product_analysis"
+    - "competitor_research"
+    - "market_analysis" 
+  allow delegation: false
+  verbose: true
+
+Keyword_researcher:
+  role:
+      role: "Keyword Researcher Specialist"
+  goals:
+    - "Analyze product features and specifications"
+    - "Identify competitive advantages"
+    - "Determine SEO-optimization opportunities"
+  backstory: "Experienced product analyst with expertise in SEO optimization"
+  tools:
+    - "product_analysis"
+    - "competitor_research"
+    - "market_analysis" 
+  allow delegation: false
+  verbose: true
+
+rich_semantic_keywords_researcher:
+competitor_analysis_researcher:
+trends_researcher:
+voice_of_customer_researcher:
+category_specific_nuances_researcher:
+assessment_current_content_researcher:
+platform_policies_researcher:

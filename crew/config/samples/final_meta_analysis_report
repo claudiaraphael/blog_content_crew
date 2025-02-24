@@ -1,0 +1,42 @@
+generate_final_assessment:
+  id: "task_final_assessment"
+  name: "Final Meta-Analysis Report"
+
+  description: |
+    ## Goal  
+    Provide a high-level meta-analysis of all executed tasks, assessing their effectiveness,  
+    quality, and overall impact.  
+    - Do **not** repeat individual outputs; instead, synthesize overarching insights.  
+    - Identify strengths, weaknesses, and provide a final quality rating.  
+
+    ## Specify Return Format  
+    The output must strictly follow this **Markdown structure**:  
+
+    ```markdown
+    # Final Meta-Analysis Report
+
+    ## Executive Summary  
+    *(High-level synthesis of the entire execution, summarizing the most important takeaways.)*  
+
+    ## Strengths  
+    *(Key aspects where the analysis and execution performed exceptionally well.)*  
+
+    ## Weaknesses  
+    *(Identify gaps, inconsistencies, or areas for refinement.)*  
+
+    ## Quality Rating  
+    - **Overall Score:** Excellent | Good | Needs Improvement | Poor  
+    - **Justification:** *(Explain why this rating was assigned.)*  
+
+    ## Final Recommendations  
+    *(Summarized, actionable recommendations for improvement.)*  
+    ```
+
+    ## Warnings and Requirements  
+    - **Strictly adhere to the Markdown format**—no deviations.  
+    - **No hallucinations**—only synthesize data from provided task outputs.  
+    - **Avoid generating new insights**—use only existing findings.  
+
+    ## Context  
+    All relevant execution data can be accessed here:  
+    **[Dynamically Inserted URL]**
