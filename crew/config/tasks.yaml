@@ -17,41 +17,10 @@ research_brand_voice:
       and visibility in search engines.
       
       Provide a high-level meta-analysis of all executed tasks, assessing their effectiveness,  
-    quality, and overall impact.  
-    - Do **not** repeat individual outputs; instead, synthesize overarching insights.  
-    - Identify strengths, weaknesses, and provide a final quality rating.  
+      quality, and overall impact.
+      -Do **not** repeat individual outputs; instead, synthesize overarching insights.  
+      -Identify strengths, weaknesses, and provide a final quality rating.    
 
-    ## Specify Return Format  
-    The output must strictly follow this **Markdown structure**:  
-
-    ```markdown
-    # Final Meta-Analysis Report
-
-    ## Executive Summary  
-    *(High-level synthesis of the entire execution, summarizing the most important takeaways.)*  
-
-    ## Strengths  
-    *(Key aspects where the analysis and execution performed exceptionally well.)*  
-
-    ## Weaknesses  
-    *(Identify gaps, inconsistencies, or areas for refinement.)*  
-
-    ## Quality Rating  
-    - **Overall Score:** Excellent | Good | Needs Improvement | Poor  
-    - **Justification:** *(Explain why this rating was assigned.)*  
-
-    ## Final Recommendations  
-    *(Summarized, actionable recommendations for improvement.)*  
-    ```
-
-    ## Warnings and Requirements  
-    - **Strictly adhere to the Markdown format**—no deviations.  
-    - **No hallucinations**—only synthesize data from provided task outputs.  
-    - **Avoid generating new insights**—use only existing findings.  
-
-    ## Context  
-    All relevant execution data can be accessed here:  
-    **[Dynamically Inserted URL]**
   prompt:
     system: |
       As a Brand Voice Analyst, analyze the brand's communication style, tone, 
@@ -85,7 +54,7 @@ research_brand_voice:
           ```
 
 # Research: Product Specifics → Understand key product attributes & features
- research_product_specifics:
+research_product_specifics:
   id: "task_002"
   name: "Product Specifics Analysis"
   description: |
@@ -481,5 +450,4 @@ research_platform_policies:
     name: "Market Trends Analysis"
     description: |
     ...
-
 
